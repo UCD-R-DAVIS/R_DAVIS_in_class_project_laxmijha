@@ -63,3 +63,51 @@ elephant1_lb<-elephant1_kg*2.2
 
 elephant2_lb>elephant1_lb
 myelephants<-c(elephant1_lb,elephant2_lb)
+getwd()
+
+
+setwd()
+d<-read.csv("./data/tail_length.csv")
+
+# creating the files 
+
+dir.create("./lectures")
+dir.create("./lectures")
+
+#How R Thinks About Data 
+##vectors------
+weight_g<-c(50,60,65,82)
+weight_one_value<-c(50)
+##combine the vectors
+animals<-c("mouse","rat","dog")
+animals
+length(weight_g)
+str(weight_g)
+
+weight_g<-c(weight_g,90)
+weight_g
+##challenge vectors
+num_char <- c(1, 2, 3, "a")## chooses lowest common denominator
+#vectors have to be the SAME class of values
+num_char
+num_logical <- c(1, 2, 3, TRUE)
+##coerses values to be all the same ,e.g when True is included 
+num_logical
+char_logical <- c("a", "b", "c", TRUE)
+char_logical
+tricky <- c(1, 2, 3, "4")
+tricky
+## Subsetting
+animals<-c("mouse","rat","dog","cat")
+animals
+animals[2]
+animals[c(2,3)]
+## indexing:take items from a vector and create a new combination of values
+weight_g<-c(21,34,39,54,55)
+weight_g>50
+weight_g[weight_g>50]
+##symbols
+
+animals %in% c("rat", "cat", "dog","duck","goat")
+
+animals == c("rat","cat","dog","duck","goat")
