@@ -17,8 +17,8 @@ surveys_base_5000
 #Convert both species_id and plot_type to factors
 
 factor(surveys_base_5000$species_id)
-experiment<- levels(surveys_base_5000$species_id)
-experiment
+#experiment<- levels(surveys_base_5000$species_id)
+#experiment
 
 factor(surveys_base_5000$plot_type)
 
@@ -26,10 +26,11 @@ factor(surveys_base_5000$plot_type)
 
 surveys_base_5000_weight_NA<- na.omit(surveys_base_5000, col="weight")
 surveys_base_5000_weight_NA
-
+colSums(is.na(surveys_base_5000))# check the vector  
+colSums(is.na(surveys_base_5000_weight_NA))
 
 
 ##CHALLENGE:
-challenge_base<- surveys_base_5000[surveys_base_5000$weight> 150, ]
+challenge_base<- surveys_base[surveys_base[, 2] > 150, ]
 challenge_base
 
